@@ -8,15 +8,20 @@ class ProductCard extends StatelessWidget {
   final String imageUrl;
   final String title;
   final String price;
-  ProductCard({this.onPressed, this.imageUrl, this.title, this.price, this.productId});
+  ProductCard(
+      {this.onPressed, this.imageUrl, this.title, this.price, this.productId});
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        Navigator.push(context, MaterialPageRoute(
-          builder: (context) => ProductPage(productId: productId,),
-        ));
+        Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => ProductPage(
+                productId: productId,
+              ),
+            ));
       },
       child: Container(
         decoration: BoxDecoration(
@@ -46,8 +51,7 @@ class ProductCard extends StatelessWidget {
               child: Padding(
                 padding: const EdgeInsets.all(24.0),
                 child: Row(
-                  mainAxisAlignment:
-                  MainAxisAlignment.spaceBetween,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
                       title,
@@ -57,9 +61,9 @@ class ProductCard extends StatelessWidget {
                       price,
                       style: TextStyle(
                           fontSize: 13.0,
+                          // ignore: deprecated_member_use
                           color: Theme.of(context).accentColor,
-                          fontWeight: FontWeight.w600
-                      ),
+                          fontWeight: FontWeight.w600),
                     ),
                   ],
                 ),

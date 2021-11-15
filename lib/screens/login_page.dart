@@ -1,7 +1,6 @@
 import 'package:a_commerce/screens/register_page.dart';
 import 'package:a_commerce/validator.dart';
 import 'package:a_commerce/widgets/changescreen.dart';
-import 'package:a_commerce/widgets/mytextformField.dart';
 import 'package:a_commerce/widgets/passwordtextformfield.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -43,6 +42,7 @@ class _LoginState extends State<Login> {
       if (error.message != null) {
         message = error.message;
       }
+      // ignore: deprecated_member_use
       _scaffoldKey.currentState.showSnackBar(
         SnackBar(
           content: Text(message.toString()),
@@ -57,6 +57,7 @@ class _LoginState extends State<Login> {
       setState(() {
         isLoading = false;
       });
+      // ignore: deprecated_member_use
       _scaffoldKey.currentState.showSnackBar(SnackBar(
         content: Text(error.toString()),
         duration: Duration(milliseconds: 800),

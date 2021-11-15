@@ -11,6 +11,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  // ignore: unused_field
   FirebaseServices _firebaseServices = FirebaseServices();
 
   PageController _tabsPageController;

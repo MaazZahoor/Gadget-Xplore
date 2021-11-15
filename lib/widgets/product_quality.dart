@@ -10,7 +10,6 @@ class ProductQuality extends StatefulWidget {
 }
 
 class _ProductQualityState extends State<ProductQuality> {
-
   int _selected = 0;
 
   @override
@@ -33,7 +32,11 @@ class _ProductQualityState extends State<ProductQuality> {
                 width: 42.0,
                 height: 42.0,
                 decoration: BoxDecoration(
-                  color: _selected == i ? Theme.of(context).accentColor : Color(0xFFDCDCDC),
+                  // ignore: deprecated_member_use
+                  color: _selected == i
+                      // ignore: deprecated_member_use
+                      ? Theme.of(context).accentColor
+                      : Color(0xFFDCDCDC),
                   borderRadius: BorderRadius.circular(8.0),
                 ),
                 alignment: Alignment.center,

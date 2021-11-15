@@ -1,5 +1,4 @@
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
 class BottomTabs extends StatefulWidget {
@@ -86,6 +85,7 @@ class BottomTabBtn extends StatelessWidget {
         decoration: BoxDecoration(
             border: Border(
                 top: BorderSide(
+          // ignore: deprecated_member_use
           color: _selected ? Theme.of(context).accentColor : Colors.transparent,
           width: 2.0,
         ))),
@@ -93,6 +93,7 @@ class BottomTabBtn extends StatelessWidget {
           image: AssetImage(imagePath ?? "assets/images/tab_home.png"),
           width: 22.0,
           height: 22.0,
+          // ignore: deprecated_member_use
           color: _selected ? Theme.of(context).accentColor : Colors.black,
         ),
       ),

@@ -1,11 +1,9 @@
 import 'package:a_commerce/screens/product_page.dart';
 import 'package:a_commerce/services/firebase_services.dart';
 import 'package:a_commerce/widgets/custom_action_bar.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
 class SavedTab extends StatelessWidget {
-
   final FirebaseServices _firebaseServices = FirebaseServices();
 
   @override
@@ -108,6 +106,7 @@ class SavedTab extends StatelessWidget {
                                             style: TextStyle(
                                                 fontSize: 14.0,
                                                 color: Theme.of(context)
+                                                    // ignore: deprecated_member_use
                                                     .accentColor,
                                                 fontWeight: FontWeight.w600),
                                           ),

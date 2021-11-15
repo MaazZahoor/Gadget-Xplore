@@ -91,6 +91,7 @@ class _ProductPageState extends State<ProductPage> {
                         "\PKR ${documentData['price']}",
                         style: TextStyle(
                           fontSize: 18.0,
+                          // ignore: deprecated_member_use
                           color: Theme.of(context).accentColor,
                           fontWeight: FontWeight.w600,
                         ),
@@ -132,6 +133,7 @@ class _ProductPageState extends State<ProductPage> {
                           GestureDetector(
                             onTap: () async {
                               await _addToSaved();
+                              // ignore: deprecated_member_use
                               Scaffold.of(context).showSnackBar(_snackBar);
                             },
                             child: Container(
@@ -155,6 +157,7 @@ class _ProductPageState extends State<ProductPage> {
                               onTap: () async {
                                 await _addToCart();
                                 if (mounted)
+                                  // ignore: deprecated_member_use
                                   Scaffold.of(context).showSnackBar(_snackBar);
                               },
                               child: Container(

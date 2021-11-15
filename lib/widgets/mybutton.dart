@@ -9,6 +9,7 @@ class MyButton extends StatelessWidget {
     return Container(
       height: 45,
       width: double.infinity,
+      // ignore: deprecated_member_use
       child: RaisedButton(
         child: Text(
           name,
